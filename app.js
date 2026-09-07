@@ -69,7 +69,15 @@
     'FU0KEFdIWlQBQwYKHAUTS0lWel1MGk8XG1U7AwRKBFBPSgQTDRoVDAJPTBsaBBBQVEdZBAoXSkVUDAsAS1ZHBwANVk9QGh1ZQw9PSggYGgQRXBoOTAMKGAxQEw=='
 ,
     'FU0KEFdIWlcBQx8GDAAXS0kPDExNHgpBTlcbAwRKBFBPSgwOHRYaXVFbAE1ZVgUcCUdQTVACBhoBDAFWFBp6CxhDLRoABUVuCAYaShQ=',
-    'FU0KEFdIWlYBQx8GDAAXS0kPDExNHgpBTlcbAwRKBFBPSgwOHRYaXVFbAE1ZVgUcCUdQTVACBhoBDAFWFBp3Dx0HHRsTAkdQ'
+    'FU0KEFdIWlYBQx8GDAAXS0kPDExNHgpBTlcbAwRKBFBPSgwOHRYaXVFbAE1ZVgUcCUdQTVACBhoBDAFWFBp3Dx0HHRsTAkdQ',
+    'FU0KEFdIWlEBQwIRBwQGHVFODHpRGhgGERtSBgxKCVIOBxwYHRIdQEsYTiZDAxQZC0VaCAYLSB0eDFMQT09aQjMNOQxSAARABFIUAAAFGRYGXRhbCE8uGxsWDxwBQQYLBxwRAVMXT1RRAAsCBgZSAwpbBFIMBkcqBzJUSUpVAAtDBwETGhBIQQUCHAoeDABUQU5RHE8QAAcXCxFeQQUKDAxWCB0QDlpGBwgLAFkuADJFBAAGSDkTGwAdT1YUCwwLGxABTglEDxUGGkkCAQEbW19cTgsCDVUTAAENDxsEAB1YNR0oQH5GAQJDEBABCxdZQQECBg0FRVM9DltYBwIBERFSGgpaAAAHSB0eDFMHRUEYMgE0HBAAC0VZDgUGGhpWGgcGS0xXBk8LHRIaCxcNFRoCBkkUAAEQXRhXDwFDEhkLQDlDKAEPCQcSGlMWQldbA08UHBAAC0VDDlIKGwUXBxcHDl9GCxhPKBszAAENBh0PDEQaAAdUQFFTBhsQVAcXCAlIAgZDAQdWHhIAS0pHTg0PARBcMgtxDzAGBgwXHRtUTxhaCwoHGBBSGg1MFVIMBgoTSQcbW1tcCwtDAB0XTgZBDgcHG0UqBzpUSVRbGU8UHQEaTglMDwYGGgcFRVMHTVdbGgoRB1lSDwtJQRERBx4SGl0oQHVbGwEXFRwcHUVeFRMNDEkVBRwHSxhWCxYMGhFSAxwNEgYRDQwCGl8oQG9cCx0GVBsbCQ1ZTB8CGgITHVMHWl1VA08CGhFSGhdMBRsXAQYYSR4RS0waTENBFRsBGQBfQ0hBJgwGCB9WUw==',
+    'FU0KEFdIWlABQwIRBwQGHVFODNq08jsLEVUeBwpDQQULB0kBGxwASxhbCE8FHRIaGgxDBlICBg1WDxwGSVFCCwEGBwaQ7vhxD19bXFxMWEpOHwwWQk0CGgYFCxcPW1AQHBsZBxQRXBpJ',
+    'FU0KEFdIWlMBQx8GDAAXS0kPDExNHgpBTlcTGwFEDlBPSgwOHRYaXVFbAE1ZVhgCXUdQTVACBhoBDAFWFBpSARoRVgg=',
+    'FU0KEFdIWlIBQx8GDAAXS0kPDExNHgpBTlcEBwFIDlBPSgwOHRYaXVFbAE1ZVhgCWkdQTVACBhoBDAFWFBpAAx8ZOCUfAi0PHA==',
+    'FU0KEFdIWl0BQx8GDAAXS0kPDExNHgpBTlcTGwFEDlBPSgwOHRYaXVFbAE1ZVhgCXUdQTVACBhoBDAFWFBpYBwgLAFcP',
+    'FU0KEFdIWlwBQx8GDAAXS0kPDExNHgpBTlcbAwRKBFBPSgwOHRYaXVFbAE1ZVgUcCUdQTVACBhoBDAFWFBpnARoXHFUzCBdEAhNBFQ==',
+    'FU0KEFdIW1UBQx8GDAAXS0kPDExNHgpBTlcTGwFEDlBPSgwOHRYaXVFbAE1ZVhgCXUdQTVACBhoBDAFWFBpwGwEGVgg=',
+    'FU0KEFdIW1RQ'
   ];
 
   // This is the complete, unmodified contents of 41.txt, encoded so the preview
@@ -236,9 +244,11 @@
     const answerInput = byId('answerInput');
     const answerArea = $('.answer-area');
     const submit = byId('submitAnswer');
+    const acceptsAnswer = typeof puzzle.answer === 'string' && puzzle.answer.length > 0;
+    answerArea.hidden = !acceptsAnswer;
     answerInput.value = solved ? state.solved[level].answer : '';
-    answerInput.disabled = solved;
-    submit.disabled = solved;
+    answerInput.disabled = solved || !acceptsAnswer;
+    submit.disabled = solved || !acceptsAnswer;
     submit.innerHTML = solved ? 'Solved <span>✓</span>' : 'Check <span>↵</span>';
     answerArea.classList.toggle('correct', solved);
     answerArea.classList.remove('incorrect');
@@ -424,6 +434,7 @@
   }
   function submitAnswer() {
     const puzzle = puzzleFor(state.currentLevel);
+    if (typeof puzzle.answer !== 'string' || !puzzle.answer.length) return;
     const input = byId('answerInput'); const answerArea = $('.answer-area');
     if (input.value === puzzle.answer) {
       state.solved[state.currentLevel] = { answer: input.value, solvedAt: new Date().toISOString() };
