@@ -1,0 +1,189 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="theme-color" content="#0b0b0d" />
+    <title>The Vortarium Puzzles</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div class="app-shell" id="appShell">
+      <header class="app-header">
+        <div class="header-side header-left">
+          <button class="icon-button labeled-button" id="openRules" aria-label="Open rulebook">
+            <span class="book-icon" aria-hidden="true"></span><span>Rules</span>
+          </button>
+          <div class="file-actions">
+            <button class="icon-button compact-button" id="saveProgress" title="Download your encrypted work">Save</button>
+            <button class="icon-button compact-button" id="loadProgress" title="Restore previously downloaded work">Load</button>
+            <input id="importFile" type="file" accept=".txt" hidden />
+          </div>
+        </div>
+
+        <div class="header-title">
+          <p class="header-title-main">Vortarium</p>
+          <p class="header-title-sub">100 Puzzle Challenge</p>
+        </div>
+
+        <div class="header-side header-right">
+          <button class="canvas-launch" id="openCanvas" aria-label="Open infinite canvas">
+            <span class="canvas-glyph" aria-hidden="true"><i></i><i></i><i></i><i></i></span>
+            <span>Canvas</span>
+          </button>
+          <button class="icon-button labeled-button" id="toggleNotebook" aria-expanded="false">
+            <span class="note-icon" aria-hidden="true"></span><span>Notebook</span>
+          </button>
+        </div>
+      </header>
+
+      <main class="workspace">
+        <section class="question-pane" aria-live="polite">
+          <div class="question-inner">
+            <p class="eyebrow zone-label"><span id="zoneNumeral">I.</span> <span id="zoneName" class="zone-name">Foundation</span> <span class="zone-sep">—</span> <span id="zoneProgress">1/10</span></p>
+            <h1 id="puzzleTitle">PUZZLE 1</h1>
+            <div class="prompt-card" id="promptCard">
+              <pre id="puzzlePrompt"></pre>
+            </div>
+            <div class="puzzle-media" id="puzzleMedia" hidden></div>
+            <div class="puzzle-widget" id="puzzleWidget" hidden></div>
+            <div class="answer-area">
+              <label for="answerInput">Answer</label>
+              <div class="answer-control">
+                <input id="answerInput" autocomplete="off" autocapitalize="off" spellcheck="false" placeholder="Enter your answer" />
+                <button id="submitAnswer" class="submit-button">Check <span>↵</span></button>
+              </div>
+              <p class="answer-message" id="answerMessage" role="status"></p>
+            </div>
+            <p class="archive-notice" id="archiveNotice" hidden>More puzzles will appear here when they are added.</p>
+          </div>
+        </section>
+
+        <aside class="notebook-pane" id="notebookPane" aria-label="Shared notebook">
+          <div class="notebook-head">
+            <div><p class="eyebrow">PRIVATE WORKSPACE</p><h2>Notebook</h2></div>
+            <button class="close-pane" id="closeNotebook" aria-label="Close notebook">×</button>
+          </div>
+          <div class="format-toolbar" aria-label="Notebook formatting">
+            <button data-command="bold" title="Bold"><strong>B</strong></button>
+            <button data-command="underline" title="Underline"><u>U</u></button>
+            <span></span>
+            <button data-command="insertUnorderedList" title="Bulleted list">• —</button>
+            <button data-command="insertOrderedList" title="Numbered list">1.</button>
+          </div>
+          <div class="notebook-editor" id="notebookEditor" contenteditable="true" data-placeholder="Start a shared set of notes…"></div>
+          <p class="notebook-foot">Saved automatically on this device.</p>
+        </aside>
+      </main>
+
+      <footer class="app-footer">
+        <button class="grid-button" id="openLevelSelect" aria-label="Choose a level" title="Level selection">
+          <span></span><span></span><span></span><span></span>
+        </button>
+        <div class="footer-center">
+          <div class="nav-buttons">
+            <button class="nav-button" id="previousLevel" aria-label="Previous puzzle">←</button>
+            <div class="level-readout">
+              <p>PUZZLE</p>
+              <div class="level-number-wrap"><span id="footerLevel">1</span></div>
+            </div>
+            <button class="nav-button" id="nextLevel" aria-label="Next puzzle">→</button>
+          </div>
+          <p class="footer-difficulty" id="footerDifficulty">PUZZLE 1 / 100</p>
+        </div>
+        <div class="footer-status"><span class="status-dot" id="statusDot"></span><span id="statusText">In progress</span></div>
+      </footer>
+    </div>
+
+    <div class="modal-backdrop rules-backdrop hidden" id="rulesModal" role="dialog" aria-modal="true" aria-labelledby="rulesTitle">
+      <section class="modal rules-modal">
+        <button class="modal-x rules-x" id="closeRules" aria-label="Close rules" disabled>×</button>
+        <div class="rules-scroll" id="rulesScroll">
+          <p class="eyebrow">VORTARIUM</p>
+          <h2 id="rulesTitle">Rules</h2>
+          <div class="rule-card"><span>01</span><div><h3>Prize</h3><p><strong>A $1,500 prize</strong> awaits the first person to complete all 100 cryptography puzzles and pass the final verification process.</p></div></div>
+          <div class="rule-card"><span>02</span><div><h3>Time &amp; resources</h3><p>You have <strong>unlimited time</strong> and may use any resources available to you, including:</p><ul><li>AI assistants and chatbots</li><li>Friends, family, and experts</li><li>Books, online resources, and research materials</li><li>Any tools that help you solve the puzzles</li></ul></div></div>
+          <div class="rule-card"><span>03</span><div><h3>Age requirement &amp; parental consent</h3><p>If you are under 18, you need <strong>parental or guardian consent</strong> to claim the prize. Your parent or legal guardian must contact Vortarium / Logan Sattler to verify consent before the prize can be awarded.</p></div></div>
+          <div class="rule-card"><span>04</span><div><h3>Fair-play &amp; verification</h3><p>Extracting or reverse-engineering source code to skip levels or obtain answers is <strong>strictly prohibited</strong>. At the end of the challenge, Vortarium / Logan Sattler may require you to demonstrate every answer with your working, reasoning, and relevant intermediate steps. Multi-step puzzles must be supported by your process.</p></div></div>
+          <div class="rule-card"><span>05</span><div><h3>Progress &amp; data</h3><p>Your progress, notebook, and canvas are saved in this browser on this device. Use <strong>Save work</strong> regularly to create an encrypted, password-protected backup. We are not responsible for lost progress caused by cleared browser data, device changes, or a lost backup password.</p></div></div>
+          <div class="rule-card"><span>06</span><div><h3>Puzzle instructions &amp; answers</h3><p>Every instruction for every level appears inside the puzzle screen. There are <strong>no hidden answers</strong> elsewhere in the interface. All answers are case-sensitive and must be typed <strong>exactly</strong> as the puzzle specifies.</p></div></div>
+          <div class="rules-consent" id="rulesConsent">
+            <label><input type="checkbox" id="termsCheck" /> <span>I have read and agree to these terms and conditions.</span></label>
+            <button class="consent-close" id="consentClose" disabled>Begin puzzles <span>→</span></button>
+          </div>
+          <button class="reset-data-button" id="requestReset" hidden>RESET ALL DATA</button>
+        </div>
+      </section>
+    </div>
+
+    <div class="modal-backdrop hidden" id="levelsModal" role="dialog" aria-modal="true" aria-labelledby="levelsTitle">
+      <section class="modal levels-modal">
+        <button class="modal-x" id="closeLevelSelect" aria-label="Close level selection">×</button>
+        <div class="modal-heading"><p class="eyebrow">PUZZLE INDEX</p><h2 id="levelsTitle">Select a puzzle</h2><p>Unlocked puzzles can be revisited at any time.</p></div>
+        <div class="level-grid" id="levelGrid"></div>
+        <div class="level-key"><span class="key-current"></span> Current <span class="key-unlocked"></span> Unlocked <span class="key-locked"></span> Locked</div>
+      </section>
+    </div>
+
+    <section class="canvas-overlay hidden" id="canvasOverlay" aria-label="Infinite canvas">
+      <div class="canvas-head">
+        <div><p class="eyebrow">PRIVATE WORKSPACE</p><h2>Canvas</h2></div>
+        <div class="canvas-controls">
+          <div class="color-picker" aria-label="Ink color">
+            <button class="color-swatch active" data-color="#f2f2ee" style="--swatch:#f2f2ee" title="White"></button>
+            <button class="color-swatch" data-color="#ef7575" style="--swatch:#ef7575" title="Red"></button>
+            <button class="color-swatch" data-color="#e9c65d" style="--swatch:#e9c65d" title="Yellow"></button>
+            <button class="color-swatch" data-color="#88bf8a" style="--swatch:#88bf8a" title="Green"></button>
+            <button class="color-swatch" data-color="#79a9eb" style="--swatch:#79a9eb" title="Blue"></button>
+          </div>
+          <button class="tool-toggle active" id="drawTool">Draw</button>
+          <button class="tool-toggle" id="eraseTool">Erase</button>
+          <button class="tool-toggle" id="clearCanvas">Clear</button>
+          <button class="modal-x" id="closeCanvas" aria-label="Close canvas">×</button>
+        </div>
+      </div>
+      <canvas id="drawingCanvas"></canvas>
+      <div class="canvas-help">Scroll to zoom · Middle drag to pan · Left drag to draw · Right drag to erase</div>
+    </section>
+
+    <div class="lightbox-overlay hidden" id="imageLightbox" role="dialog" aria-modal="true" aria-label="Image preview">
+      <button class="lightbox-close" id="closeLightbox" aria-label="Close image preview">×</button>
+      <img id="lightboxImage" src="" alt="" />
+    </div>
+
+    <div class="text-overlay hidden" id="textOverlay" role="dialog" aria-modal="true" aria-label="Text file preview">
+      <div class="text-overlay-head">
+        <span id="textOverlayName">file.txt</span>
+        <button class="modal-x" id="closeTextOverlay" aria-label="Close text preview">×</button>
+      </div>
+      <pre class="text-overlay-body" id="textOverlayBody"></pre>
+    </div>
+
+    <div class="modal-backdrop hidden" id="resetConfirmModal" role="dialog" aria-modal="true" aria-labelledby="resetConfirmTitle">
+      <section class="modal reset-modal">
+        <h2 id="resetConfirmTitle">Reset all data?</h2>
+        <p>All puzzle progress, notebook notes, and canvas work on this device will be permanently erased.</p>
+        <div class="reset-actions"><button class="secondary-button" id="cancelReset">Cancel</button><button class="danger-button" id="confirmReset">Yes, continue</button></div>
+      </section>
+    </div>
+
+    <div class="modal-backdrop hidden" id="resetPhraseModal" role="dialog" aria-modal="true" aria-labelledby="resetPhraseTitle">
+      <section class="modal reset-modal">
+        <h2 id="resetPhraseTitle">One final check</h2>
+        <p>Type this sentence exactly to permanently erase everything:</p>
+        <p class="reset-phrase">I understand I will lose all my data.</p>
+        <label class="sr-only" for="resetPhraseInput">Acknowledgement sentence</label>
+        <input class="reset-phrase-input" id="resetPhraseInput" autocomplete="off" spellcheck="false" />
+        <p class="reset-error" id="resetError" role="status"></p>
+        <p class="reset-wait" id="resetWait" role="status"></p>
+        <div class="reset-actions"><button class="secondary-button" id="cancelPhraseReset">Cancel</button><button class="danger-button" id="completeReset" disabled>Erase everything</button></div>
+      </section>
+    </div>
+
+    <div class="toast" id="toast" role="status"></div>
+    <script src="app.js"></script>
+  </body>
+</html>
