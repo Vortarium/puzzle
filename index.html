@@ -53,6 +53,7 @@
             <div class="answer-area">
               <label for="answerInput">Answer</label>
               <div class="answer-control">
+                <button type="button" class="answer-part-toggle" id="answerPartToggle" hidden aria-label="Switch answer"></button>
                 <input id="answerInput" autocomplete="off" autocapitalize="off" spellcheck="false" placeholder="Enter your answer" />
                 <button id="submitAnswer" class="submit-button">Check <span>↵</span></button>
               </div>
@@ -124,7 +125,16 @@
         <button class="modal-x" id="closeLevelSelect" aria-label="Close level selection">×</button>
         <div class="modal-heading"><p class="eyebrow">PUZZLE INDEX</p><h2 id="levelsTitle">Select a puzzle</h2><p>Unlocked puzzles can be revisited at any time.</p></div>
         <div class="level-grid" id="levelGrid"></div>
-        <div class="level-key"><span class="key-current"></span> Current <span class="key-unlocked"></span> Unlocked <span class="key-locked"></span> Locked</div>
+        <div class="level-key"><span class="key-complete"></span> Complete <span class="key-current"></span> Currently on <span class="key-locked"></span> Locked</div>
+      </section>
+    </div>
+
+    <div class="modal-backdrop hidden" id="answerPartsModal" role="dialog" aria-modal="true" aria-labelledby="answerPartsTitle">
+      <section class="modal answer-parts-modal">
+        <button class="modal-x" id="closeAnswerParts" aria-label="Close answer selection">×</button>
+        <div class="modal-heading"><p class="eyebrow">MULTI-PART ANSWER</p><h2 id="answerPartsTitle">Select an answer</h2><p>Switch between the parts of this puzzle.</p></div>
+        <div class="level-grid answer-parts-grid" id="answerPartsGrid"></div>
+        <div class="level-key"><span class="key-complete"></span> Solved <span class="key-current"></span> Current <span class="key-locked"></span> Not yet reached</div>
       </section>
     </div>
 
