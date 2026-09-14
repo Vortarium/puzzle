@@ -45,6 +45,11 @@ button:focus-visible, input:focus-visible, [contenteditable="true"]:focus-visibl
 .canvas-launch { display: flex; align-items: center; gap: 9px; padding: 8px 14px; border: 1px solid var(--line-bright); border-radius: 100px; background: rgba(255,255,255,.035); font-size: 12px; font-weight: 600; letter-spacing: .04em; }
 .canvas-glyph { display: grid; grid-template-columns: repeat(2, 4px); gap: 2px; }
 .canvas-glyph i { width: 4px; height: 4px; border-radius: 50%; background: var(--accent); }
+.guide-launch { border-color: color-mix(in srgb, var(--accent), transparent 45%); background: rgba(var(--accent-rgb), .08); color: var(--accent); }
+.guide-launch:hover { background: rgba(var(--accent-rgb), .16); }
+.bulb-icon { width: 13px; height: 16px; position: relative; display: block; }
+.bulb-icon::before { content: ''; position: absolute; top: 0; left: 1.5px; width: 10px; height: 10px; border-radius: 50%; border: 1.5px solid currentColor; background: rgba(var(--accent-rgb), .18); }
+.bulb-icon::after { content: ''; position: absolute; bottom: 0; left: 4.5px; width: 4px; height: 3px; border: 1.3px solid currentColor; border-top: 0; border-radius: 0 0 1px 1px; }
 .workspace { min-height: 0; display: flex; }
 .question-pane { width: 100%; min-width: 0; overflow: auto; transition: width .42s cubic-bezier(.2,.8,.2,1); }
 .question-inner { width: min(680px, calc(100% - 50px)); margin: 0 auto; min-height: 100%; padding: clamp(46px, 10vh, 100px) 0 70px; display: flex; flex-direction: column; justify-content: center; }
@@ -161,6 +166,23 @@ h1 { margin-bottom: 11px; font-size: clamp(30px, 4.2vw, 46px); letter-spacing: -
 .modal-x:disabled { opacity: .25; cursor: not-allowed; }
 .rules-modal { width: min(730px, 100%); }
 .rules-scroll { max-height: min(800px, calc(100dvh - 44px)); overflow: auto; padding: 55px clamp(25px, 6vw, 65px) 36px; scrollbar-color: var(--surface-soft) transparent; }
+.guide-modal { width: min(650px, 100%); }
+.guide-scroll { max-height: min(800px, calc(100dvh - 44px)); overflow: auto; padding: 55px clamp(25px, 6vw, 65px) 36px; scrollbar-color: var(--surface-soft) transparent; }
+.guide-card > span { padding-top: 1px; }
+.hint-divider { margin: 24px 0 20px; border-top: 1px solid var(--line); }
+.hint-trigger { display: flex; align-items: center; gap: 10px; width: 100%; padding: 14px 16px; border: 1px solid var(--line-bright); border-radius: 12px; background: rgba(255,255,255,.025); color: var(--text); font-size: 13px; font-weight: 600; }
+.hint-trigger:hover:not(:disabled) { background: var(--surface-soft); border-color: var(--accent); color: var(--accent); }
+.hint-trigger:disabled { opacity: .4; cursor: not-allowed; }
+.hint-modal { width: min(480px, 100%); }
+.hint-modal-inner { padding: 45px clamp(25px, 6vw, 50px) 36px; }
+.hint-price { margin: 6px 0 18px; font-size: clamp(38px, 8vw, 52px); letter-spacing: -.05em; color: var(--accent); }
+.hint-copy { max-width: 420px; margin-bottom: 28px; color: var(--muted); font-size: 13px; line-height: 1.6; }
+.hint-actions { display: flex; justify-content: flex-end; gap: 9px; }
+.hint-actions .secondary-button { border-color: rgba(228,112,112,.7); color: #ff9292; }
+.hint-actions .secondary-button:hover { background: rgba(228,112,112,.12); border-color: var(--danger); color: #ffb0b0; }
+.hint-proceed { min-height: 39px; padding: 0 15px; display: flex; align-items: center; gap: 8px; border: 0; border-radius: 8px; background: var(--accent); color: #0f1c10; font-size: 12px; font-weight: 700; }
+.hint-proceed:hover:not(:disabled) { filter: brightness(1.08); }
+.hint-proceed:disabled { opacity: .35; cursor: not-allowed; }
 .rules-scroll h2, .levels-modal h2, .canvas-head h2 { margin-bottom: 14px; font-size: clamp(29px, 4vw, 41px); letter-spacing: -.05em; }
 .rules-lead { max-width: 500px; margin-bottom: 38px; color: #c4c4c0; font-size: 16px; line-height: 1.55; }
 .rule-card { display: grid; grid-template-columns: 32px 1fr; gap: 15px; padding: 19px 0; border-top: 1px solid var(--line); }

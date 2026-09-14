@@ -34,6 +34,10 @@
             <span class="canvas-glyph" aria-hidden="true"><i></i><i></i><i></i><i></i></span>
             <span>Canvas</span>
           </button>
+          <button class="canvas-launch guide-launch" id="openGuide" aria-label="Open player guide">
+            <span class="bulb-icon" aria-hidden="true"></span>
+            <span>Guide</span>
+          </button>
           <button class="icon-button labeled-button" id="toggleNotebook" aria-expanded="false">
             <span class="note-icon" aria-hidden="true"></span><span>Notebook</span>
           </button>
@@ -116,6 +120,41 @@
             <button class="consent-close" id="consentClose" disabled>Begin puzzles <span>→</span></button>
           </div>
           <button class="reset-data-button" id="requestReset" hidden>RESET ALL DATA</button>
+        </div>
+      </section>
+    </div>
+
+    <div class="modal-backdrop hidden" id="guideModal" role="dialog" aria-modal="true" aria-labelledby="guideTitle">
+      <section class="modal guide-modal">
+        <button class="modal-x" id="closeGuide" aria-label="Close guide">×</button>
+        <div class="guide-scroll" id="guideScroll">
+          <p class="eyebrow">PLAYER GUIDE</p>
+          <h2 id="guideTitle">How To Approach These Puzzles</h2>
+          <p class="rules-lead">No answers here - just a few things you can do that will help you before you go looking for answers that aren't there.</p>
+          <div class="rule-card guide-card"><span class="bulb-icon" aria-hidden="true"></span><div><h3>Read Every Word Carefully</h3><p>Every instruction you need lives inside the puzzle screen; the prompt, any image or audio, etc. Slow down and read (or look, or listen) closely before assuming something is missing. The section name and puzzle number is unrelated to all puzzles.</p></div></div>
+          <div class="rule-card guide-card"><span class="bulb-icon" aria-hidden="true"></span><div><h3>Answers Are Case-Sensitive</h3><p>Each box accepts exactly one typed answer, character for character. If you're confident in the word itself but it keeps getting rejected, try it in <strong>ALL CAPS</strong>, <strong>all lowercase</strong>, and <strong>First Letter Capitalized</strong> before assuming you're on the wrong track.</p></div></div>
+          <div class="rule-card guide-card"><span class="bulb-icon" aria-hidden="true"></span><div><h3>There's Only One Right Answer</h3><p>Each box has a single accepted answer. That's the whole reason formatting matters. If the puzzle isn't guessing at what you meant, it's matching exactly what it expects.</p></div></div>
+          <div class="rule-card guide-card"><span class="bulb-icon" aria-hidden="true"></span><div><h3>Think Outside The Box</h3><p>Not every puzzle is a plain question with a plain answer. Meaning can hide in formatting, spacing, ordering, imagery, or something easy to skim past. If the obvious reading isn't working, try looking at the puzzle from a different angle entirely.</p></div></div>
+          <div class="rule-card guide-card"><span class="bulb-icon" aria-hidden="true"></span><div><h3>Use Outside Resources</h3><p>The rules allow it, so use it: cipher identifiers and decoders, search engines, reference sites, or a friend to share answers with (just make sure you know how to still solve it even with their help). If something looks encoded, look up how that kind of encoding works and try decoding it by hand or with an online tool.</p></div></div>
+          <div class="hint-divider"></div>
+          <button class="hint-trigger" id="openHint" aria-label="Buy a hint for your current puzzle">
+            <span class="bulb-icon" aria-hidden="true"></span><span id="hintTriggerLabel">Still need help? Buy a Hint!</span>
+          </button>
+        </div>
+      </section>
+    </div>
+
+    <div class="modal-backdrop hidden" id="hintModal" role="dialog" aria-modal="true" aria-labelledby="hintTitle">
+      <section class="modal hint-modal">
+        <button class="modal-x" id="closeHint" aria-label="Close hint purchase">×</button>
+        <div class="hint-modal-inner">
+          <p class="eyebrow">HINT — PUZZLE <span id="hintLevel">1</span></p>
+          <h2 id="hintTitle" class="hint-price">$0.01</h2>
+          <p class="hint-copy" id="hintCopy">This sends a request to the puzzlemaster for a hint on your current puzzle. You'll open an email, already filled out, and can send it whenever you're ready. We'll follow up with next steps.</p>
+          <div class="hint-actions">
+            <button class="secondary-button" id="cancelHint">Cancel</button>
+            <button class="hint-proceed" id="proceedHint">Proceed <span>→</span></button>
+          </div>
         </div>
       </section>
     </div>

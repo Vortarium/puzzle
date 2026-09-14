@@ -82,7 +82,7 @@
     'FU0KEFdIW1EBQwYKHAUTS0lWbVBRHRxDRldeTAhIBRsCSlMNSwcNXl0WVE0KGRQVC0cBQxcbHAwYGhobQBoOTB8NE1cPQkddEx0OGB1UU1GWuYNaTENBFRsBGQBfElBZM0s4D0RfDmpRVkRDJg0UVkYPTVBXSjQL',
     'FU0KEFdIW1ABQwYKHAUTS0lWaFRVHQcKGhJSIgxKCQYQSkVUHhoQSV1ATFUYVgELHgAPW1ABGggfBR8RA1pYBwEIVllQGgBVFVBZSovW1JHUv9qU6Y3D85fSxIeN4ZDD0ovW6JHUsNqU1Y3D+pfS7oeN9pDD4ovW55HUv9qU7o3D4JfS7oeN4JDD6IvW4pHUu9qU+43D6pfS7YeN4JDD74vW7pHUrtqU443D9ZfS8IeNwFAeREsXBwADS0pHTFU4VgwXAglCFlIUCR0TGwBUXFFHC08GAhAAF0VLDh0XCggaBVMZT0xXBk1PVjoeCkVrABsXAA8DBVEpUw==',
     'FU0KEFdIW1MBQwYKHAUTS0lWb2t3JyZBWFcfCwFEAFBZE0sCEAMRDAIWGgobAFdeTABVFRcNGwAZB1FODExMGk0eWFcTABZaBAAQSlMtSxEBWkxRHAkPDVdeTChfT1IkBwYSCwoAS0sWMxI=',
-    'FU0KEFdIW1IBQwYKHAUTS0lWeVFfBx8GEBwTTEkPEQAMBRkCS0lWRkxAHhxZW1oXAEtaCBkKGAwSABJaQUpTQRgKHxxdPhBXGx4GSkVUCB0HWV1GHU1ZL1c4BwJeAAVDOBwMEx8RDBQWJg4REAIdAQEPTVA0BwYSS19WZ1ZHCwwXVllQLABIQ15BKwgEGRYaWl1GTi0GEVcvEw==',
+    'FU0KEFdIW1IBQwYKHAUTS0lWeVFfBx8GEBwTTEkPEQAMBRkCS0lWRkxAHhxZW1oXAEtaCBkKGAwSABJaQUpTQRgKHxxdPhBXGx4GNAcqBxAVXEhRABsGBlUQCwAPTVACBhoBDAEHDAJvTCUKEwYTGUV9FAgZBAxURVE8T0pQGQAMEFdeTDJCDhZBREs/BwARTUwWQk0hERBQQkduAAATDQcCDAFUbF1RTDIe',
     'FU0KEFdIW10BQwYKHAUTS0lWa1VbBAZDMBweCwhAAFBPShkEBh4EWhoOTJ/85MqC8fWVke3y4pnp+cyEsaiOnvDzy4Xt/+nd/uL7mPbm/oPrv7jE8f/0hOrjypWy8N6T9/jcmezlhcir/vGT6+Tfnvq8/YL8+P6G9uLe3qely5/85emC8fSxke3y2Znp+O+EsamvnvDz0YXt/sDd/uLGmPbmzIPrvp3E8f/GhOriy5Wy8deT9/nTmezki8ir/sqT6+XXnvq9xIL8+MyG9uPR3qeky5/85NCC8fWIke3zzZnp+daEsaiRnvDz0YXt/sDd/uLGmPbmzIPrvp3E8f/GhOriy5Wy8deT9/nTmezki8ir/sqT6+XXnvq9xIL8+MyG9uPR3qeky5/85NCC8fWIke3zzZnp+daEsaiRnvDz0YXt/sDd/uLGmPbmzIPrvp3E8f/GhOriy5Wy8deT9/nTmezki8ir/sqT6+XXnvq9xIL8+MyG9uPR3qeky5/85NCC8fWIke3zzZnp+daEsaiRnvDz0YXt/sDd/uLGmPbmzIPrvp3E8f/GhOriy5Wy8deT9/nTmezki8ir/sqT6+XXnvq9xIL8+MyG9uPR3qeky5/85NCC8fWIke3zzZnp+daEsaiRnvDz0YXt/sDd/uLGmPbmzIPrvp3E8f/GhOriy5Wy8deT9/nTmezki8ir/sqT6+XXnvq9xIL8+MyG9uPR3qeky5/85NCC8fWIke3zzZnp+daEsaiRnvDz0YXt/sDd/uLGmPbmzIPrvp3E8f/GhOriy5Wy8deT9/nTmezki8ir/sqT6+XXnvq9xIL8+MyG9uPR3qeky5/85NCC8fWIke3zzZnp+daEsaiRnvDz0YXt/sDd/uLGmPbmzIPrvp3E8f/GhOriy5Wy8deT9/nTmezki8ir/sqT6+XXnvq9xIL8+MyG9uPR3qeky5/85NCC8fWIke3zzZnp+daEsaiRnvDz0YXt/sDd/uLGmPbmzIPrvp3E8f/GhOriy5Wy8deT9/nTmezki8ir/sqT6+XXnvq9xIL8+MyG9uPR3qeky5/85NCC8fWIke3zzZnp+daEsaiRnvDz0YXt/sDd/uLGmPbmzIPrvp3E8f/GhOriy5Wy8deT9/nTmezki8ir/sqT6+XXnvq9xIL8+MyG9uPR3qeky5/85NCC8fWIke3zzZnp+daEsaiRnvDz0YXt/sDd/uLGmPbmzIPrvp3E8f/GhOriy5Wy8deT9/nTmezki8ir/sqT6+XXnvq9xIL8+MyG9uPR3qeky5/85NCC8fWIke3zzZnp+daEsaiRnvDz0YXt/sDd/uLGmPbmzIPrvp3E8f/GhOriy5Wy8deT9/nTmezki8ir/sqT6+XXnvq9xIL8+MyG9uPR3qeky5/85NCC8fWIke3zzZnp+daEsaiRnvDz0YXt/sDd/uLGmPbmzIPrvp3E8f/GhOriy5Wy8deT9/nTmezki8ir/sqT6+XXnvq9xIL8+MyG9uPR3qeky5/85NCC8fWIke3zzZnp+daEsaiRnvDz0YXt/sDd/uLGmPbmzIPrvp3E8f/GhOriy0cBQxMNGx4TGwBWFGMWJi4wPDY6O0QNKFIOHRoCTgURDktaCwoZERFcQEsDT1xNRkdYR11aABYaQEFNWltcQEsDT1xNRkdYR11aABYaQEFNWltcQEsDT1xNRkdYR11aABYaQEFNWltcQEsDT1xNRkdYR11aABYaQEFNWltcQEsDT1xNRkdYR11aABYaQEFNWltcQEsDT1xNRkdYR11aABYaQEFNWltcQEsDT1xNRkdYR11aABYaQEFNWltcQEsDT1xNRkdYR11aABYaQEFNWltcQEsDT1xNRkdYR11aABYaQEFNWltcQEsDT1xNRkdYR11aABYaQEFNWltcQEsDT1xNRkdYR11aABYaQEFNWltcQEsDT1xNRkdYR11aABYaQEFNWltcQEsDQ15BC1oXDUoXT1tSVglWR0NED1YeUUdaUVhHDRASSlsCCFdWTRBBXAccVkMADFpHX0FNGggBWl1bFURBVwdJVxFSWUsrFA==',
     'FU0KEFdIW1wBQwYKHAUTS0lWaVdbCQMGVBwcTjZIAAAAAEtaSwMGQVVEGk1ZVh0GGhVeW11MHx4BRwobW0xBDApNFxofQRJMFRELVx9LWjgAeV5EXjoMBDhQQkdMDwEUDRsFS0kvDGtRDx0AHFUdAEsPTVBQIx0hDwNEe1dEI00+CQ==',
     'FU0KEFdIWFUBQwYKHAUTS0lWfk1OFAMGVEFQQkdABBYKCUtMElEAV0hRTFVBHRgTCQAPTVAGEB0TBwAdQVYWVE0TGhJQE0kPABwQHwwEGlFOdRpsTENBABwfC0dwHA==',
@@ -626,6 +626,47 @@
   function closeRules() { if (!state.acceptedRules) return; byId('rulesModal').classList.add('hidden'); }
   function openLevels() { byId('levelsModal').classList.remove('hidden'); }
   function closeLevels() { byId('levelsModal').classList.add('hidden'); }
+  function openGuide() { renderHintTrigger(); byId('guideModal').classList.remove('hidden'); byId('guideScroll').scrollTop = 0; }
+  function closeGuide() { byId('guideModal').classList.add('hidden'); }
+
+  const HINT_PRICES = [null,0.01,0.02,0.03,0.04,0.07,0.11,0.13,0.16,0.21,0.83,1.03,1.24,1.47,1.72,2.00,2.31,2.64,3.00,3.40,3.82,4.27,4.75,5.26,5.80,6.26,7.00,7.65,8.34,9.06,9.82,10.61,11.44,12.31,13.22,14.16,15.14,16.15,17.21,18.31,19.46,20.65,21.89,23.18,24.51,25.89,27.32,28.79,30.31,31.88,33.48,35.14,36.85,38.60,40.41,42.26,44.17,46.12,48.12,50.18,52.29,54.45,56.67,58.94,61.26,63.64,66.05,68.53,71.06,73.64,76.27,78.95,81.68,84.46,87.29,90.18,93.12,96.11,99.15,100.00,100.00,100.00,100.00,100.00,100.00,150.00,150.00,150.00,150.00,150.00,150.00,200.00,200.00,200.00,200.00,250.00,250.00,300.00,400.00,500.00,null];
+  const HINT_EMAIL = 'lsattl3143@rcs-k12.us';
+
+  function renderHintTrigger() {
+    const level = state.currentLevel;
+    const price = HINT_PRICES[level];
+    const trigger = byId('openHint');
+    const label = byId('hintTriggerLabel');
+    if (price === null || price === undefined) {
+      trigger.disabled = true;
+      label.textContent = 'No hints available for this puzzle';
+    } else {
+      trigger.disabled = false;
+      label.textContent = 'Still need help? Buy a Hint!';
+    }
+  }
+
+  function openHint() {
+    const level = state.currentLevel;
+    const price = HINT_PRICES[level];
+    if (price === null || price === undefined) return;
+    byId('hintLevel').textContent = level;
+    byId('hintTitle').textContent = `$${price.toFixed(2)}`;
+    byId('hintModal').classList.remove('hidden');
+  }
+  function closeHint() { byId('hintModal').classList.add('hidden'); }
+
+  function proceedHint() {
+    const level = state.currentLevel;
+    const price = HINT_PRICES[level];
+    if (price === null || price === undefined) return;
+    const priceStr = price.toFixed(2);
+    const subject = `100 Puzzle Challenge - Hint Request (Puzzle ${level})`;
+    const body = `Hi,\n\nI'm a player on the 100 Puzzle Challenge, currently on puzzle ${level}. I'd like to buy a hint for this puzzle for $${priceStr}.\n\nLooking for a follow up on what to do next.\n\nThanks!`;
+    const mailto = `mailto:${HINT_EMAIL}?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
+    window.location.href = mailto;
+    closeHint();
+  }
   function updateConsent() { const checked = byId('termsCheck').checked; byId('consentClose').disabled = !checked; byId('closeRules').disabled = !checked && !state.acceptedRules; }
   function acceptRules() { if (!byId('termsCheck').checked) return; state.acceptedRules = true; persist(); renderRulesState(); closeRules(); }
   function openResetConfirmation() { byId('resetConfirmModal').classList.remove('hidden'); }
@@ -751,6 +792,11 @@
     byId('resetPhraseInput').addEventListener('input', updateResetPhrase); byId('resetPhraseInput').addEventListener('keydown', (event) => { if (event.key === 'Enter' && !byId('completeReset').disabled) completeReset(); });
     byId('cancelPhraseReset').addEventListener('click', closeResetPhrase); byId('completeReset').addEventListener('click', completeReset);
     byId('openLevelSelect').addEventListener('click', openLevels); byId('closeLevelSelect').addEventListener('click', closeLevels);
+    byId('openGuide').addEventListener('click', openGuide); byId('closeGuide').addEventListener('click', closeGuide);
+    byId('guideModal').addEventListener('click', (event) => { if (event.target === byId('guideModal')) closeGuide(); });
+    byId('openHint').addEventListener('click', openHint); byId('closeHint').addEventListener('click', closeHint);
+    byId('cancelHint').addEventListener('click', closeHint); byId('proceedHint').addEventListener('click', proceedHint);
+    byId('hintModal').addEventListener('click', (event) => { if (event.target === byId('hintModal')) closeHint(); });
     byId('answerPartToggle').addEventListener('click', openAnswerParts); byId('closeAnswerParts').addEventListener('click', closeAnswerParts);
     byId('answerPartsModal').addEventListener('click', (event) => { if (event.target === byId('answerPartsModal')) closeAnswerParts(); });
     byId('saveProgress').addEventListener('click', exportProgress);
